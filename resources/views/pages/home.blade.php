@@ -2,6 +2,21 @@
 
 @section('content')
     <h1>
-        Hello World!
+        Elenco ospiti:
     </h1>
+
+    <ul>
+        @foreach ($ospiti as $ospite)
+            <li>
+                <a href="{{ route('ospite', $ospite -> id) }}">
+                    {{ $ospite -> name }}
+                    {{ $ospite -> lastname }}
+                </a>
+            </li>
+        @endforeach
+    </ul>
+
+    <a href="">
+        Crea nuovo ospite
+    </a>
 @endsection
