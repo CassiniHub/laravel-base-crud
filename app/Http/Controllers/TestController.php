@@ -28,6 +28,16 @@ class TestController extends Controller
     }
 
     public function storeOspite(Request $request) {
-        dd($request -> all());
+        $validate = $request -> validate([
+            'name' => 'required|max:255',
+            'lastname' => 'required|max:255',
+            'date_of_birth' => 'required|date',
+            'document_type' => 'required|max:1024',
+            'document_number' => 'required|max:1024',
+        ]);
+        
+        $ospite = Ospiti::create($validate);
+        return redirect() -> route('ospite', $ospite -> id);
+
     }
 }
