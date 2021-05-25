@@ -5,7 +5,7 @@
         Compila i seguenti campi per creare un nuovo ospite:
     </h1>
 
-    <form action="{{ route('store') }}" method="POST">
+    <form method="POST" action="{{ route('storeOspite') }}" >
         @csrf
         @method('POST')
 
@@ -19,7 +19,7 @@
         </div>
         <div>
             <label for="date_of_birth">Date of Birth</label>
-            <input id="date_of_birth" type="text" name="date_of_birth">
+            <input id="date_of_birth" type="date" name="date_of_birth">
         </div>
         <div>
             <label for="document_type">Document Type</label>

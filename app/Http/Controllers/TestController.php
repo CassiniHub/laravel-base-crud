@@ -22,4 +22,12 @@ class TestController extends Controller
             'ospite'
         ));
     }
+
+    public function createOspite() {
+        return view('pages.createOspite');
+    }
+    
+    public function store(Request $request) {
+        dd($request -> all());
+    }
 }

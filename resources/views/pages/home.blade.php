@@ -16,7 +16,7 @@
         @endforeach
     </ul>
 
-    <a href="">
+    <a href="{{ route('createOspite') }}">
         Crea nuovo ospite
     </a>
 @endsection
