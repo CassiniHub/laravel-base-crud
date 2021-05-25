@@ -26,8 +26,8 @@ class TestController extends Controller
     public function createOspite() {
         return view('pages.createOspite');
     }
-    
-    public function store(Request $request) {
+
+    public function storeOspite(Request $request) {
         dd($request -> all());
     }
 }
